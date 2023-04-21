@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title><%= title %></title>
+        <link rel="stylesheet" href="css/global.css">
+        <link rel="stylesheet" href="css/login.css">
+    </head>
+    <body>
+        <div class="form-container">
+            <form id="form" action="/login" method="POST">
+                <h1>Log In</h1>
+
+                <!-- This is for success from registration page-->
+                <% if (messages.success_msg) { %>
+                    <div class="alert alert-good">
+                        <%= messages.success_msg %>
+                    </div>
+                <% } %>
+
+                <!-- This is for incorrect email or password -->
+                <% if (messages.error) { %>
+                    <%= messages.error %>
+                <% } %>
+
+                <div class="field-container">
+                    <div class="field">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" aria-autocomplete="none" required>
+                    </div>
+                    <div class="field">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" aria-autocomplete="none" required>
+                    </div>
+                </div>
+                <button type="submit">Log in</button>
+                <div class="register">
+                  Don't have an account? <a href="/register">Register</a>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <title><%= title %></title>
+        <link rel="stylesheet" href="css/index.css">
+    </head>
+    <body>
+        <h1>Hi <%= user_name %></h1>
+        <a href="chat">Start Chatting</a>
+        <form action="/logout?_method=DELETE" method="POST">
+            <button type="submit">Logout</button>
+        </form>
+    </body>
+</html>

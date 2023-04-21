@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <title><%= title %></title>
+        <link rel="stylesheet" href="css/global.css">
+        <link rel="stylesheet" href="css/chat.css">
+        <link rel="stylesheet" href="css/layouts/left_side_panel.css">
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="js/chat.js" defer></script>
+    </head>
+    <body>
+        <div class="body-container">
+            <div class="left-panel-container">
+                <%- include('layouts/left_side_panel') -%>
+            </div>
+            <div class="message-display">
+                <label hidden id="username"><%= username %></label>
+                <h1 class="chat-title">Chat Name</h1>
+                <div class="message-container">
+                    <ul id="messages">
+                        <div class="sender">
+                            <li>Hey, how's it going?</li>
+                        </div>
+                        <div class="sender">
+                            <li>I'm doing pretty good, just trying to stay busy.</li>
+                        </div>
+                        <div class="sender">
+                            <li>Just working on some projects for school. How about you?</li>
+                        </div>
+                        <div class="recipient">
+                            <div class="username-time">
+                                <div class="username">Username</div>
+                                <div class="time">12:32PM</div>
+                            </div>
+                            <li>I'm doing well, thanks for asking. How about you?</li>
+                        </div>
+                        <div class="recipient">
+                            <li>That's good to hear. What have you been up to?</li>
+                        </div>
+                        <div class="sender">
+                            <li>Yeah, weekends are the best. Do you have any plans?</li>
+                        </div>
+                        <div class="sender">
+                            <li>That sounds like a lot of fun. I might just take it easy and catch up on some reading.</li>
+                        </div>
+                        <div class="sender">
+                            <li>It's always good to have some downtime. What book are you reading?</li>
+                        </div>
+                        <div class="recipient">
+                            <li>Not yet, but I'm thinking of going for a hike or something outdoorsy.</li>
+                        </div>
+                        <div class="recipient">
+                            <li>That sounds like a great idea. Where do you plan on going?</li>
+                        </div>
+                    </ul>
+                </div> 
+                <form id="form" action="" autocomplete="off">
+                    <input id="input" autocomplete="off" aria-autocomplete="none" placeholder="Chat with a friend!">
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+            <div class="play-by-play">
+
+            </div>
+        </div>
+    </body>
+</html>
